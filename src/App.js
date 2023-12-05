@@ -1,13 +1,13 @@
 
-import { BrowserRouter } from "react-router-dom";
-import Inicio from "./Paginas/Inicio";
-import SobreMim from "./Paginas/SobreMim";
-
+import { BrowserRouter, Routes } from "react-router-dom";
 
 
 function App() {
   return (
     <BrowserRouter>
+    <Routes>
+      
+    </Routes>
     </BrowserRouter>
   )
    
