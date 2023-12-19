@@ -13,6 +13,10 @@ export default function Post() {
     return post.id === Number(parametros.id);
   });
 
+  if (!post) {
+    return <h1>post não encontrado</h1>
+  }
+
   return (
     <PostModelo
       fotoCapa={`/assets/posts/${post.id}/capa.png`}
