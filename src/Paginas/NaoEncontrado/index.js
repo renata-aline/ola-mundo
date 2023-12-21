@@ -1,7 +1,11 @@
+import BotaoPrincipal from "Componentes/BotaoPrincipal";
 import styles from "./NaoEncontrado.module.css";
 import erro404 from "assets/erro_404.png";
+import { useNavigate } from "react-router-dom";
 
 export default function NaoEncontrado() {
+  const navegar = useNavigate();
+
   return (
     <>
       <div className={styles.conteudoContainer}>
@@ -11,8 +15,10 @@ export default function NaoEncontrado() {
           Tem certeza que era isso que você tava procurando?
         </p>
         <p className={styles.paragrafo}>Volte para para página inicial.</p>
-        <div className={styles.botaocontainer}>
-          <button>Voltar</button>
+        <div className={styles.botaocontainer}
+          onClick={() => navegar(-1)}
+        >
+          <BotaoPrincipal tamanho="lg">Voltar</BotaoPrincipal>
         </div>
 
         <img
